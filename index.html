@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pagerChat</title>
+    <style>
+      body {
+        background-color: #414141;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: sans-serif;
+      }
+      .container {
+        background-color: aliceblue;
+        height: 330px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .form {
+        display: flex;
+        justify-content: space-between;
+      }
+      .mssgBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 250px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        text-align: center;
+        padding: 5px;
+        background-color: rgb(79, 79, 79);
+        color: aliceblue;
+      }
+
+      .mssg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 7px;
+        width: 255px;
+        word-wrap: break-word;
+        height: 100%;
+        overflow-y: scroll;
+        color: rgb(197, 199, 201);
+        font-size: 15px;
+        
+      }
+      .time {
+        width: 100%;
+        text-align: right;
+        display: flex;
+      }
+
+      p {
+        padding-top: 30px;
+      }
+      span {
+        width: 100%;
+        text-align: right;
+        font-size: 7px;
+      }
+
+      .mssgRec {
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+      input {
+        margin-right: 5px;
+        outline: none;
+        font-size: medium;
+        border-radius: 10px;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+      button {
+        border-radius: 10px;
+        border: 1px solid gray;
+        width: 60px;
+        cursor: pointer;
+      }
+
+      /* .activeUser {
+        display: flex;
+        width: 15px;
+        height: 15px;
+        align-self: flex-start;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid gray;
+        border-radius: 10px;
+        font-size: large;
+        padding: 15px;
+      }
+      ul {
+        list-style: none;
+        padding-left: 15px;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: rgb(81, 255, 0);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="mssgBox">
+          <!-- <div class="activeUser">
+            <ul>
+              <li>3</li>
+            </ul>
+          </div> -->
+          <div class="mssg"></div>
+          <div class="time"></div>
+        </div>
+        <div class="mssgRec">
+          <input
+            type="text"
+            id="mssgInput"
+            maxlength="200"
+            placeholder="Enter your message..."
+            required
+          />
+          <button>send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
