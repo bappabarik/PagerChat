@@ -25,7 +25,7 @@ function displayMessage(message) {
   let date = new Date();
   const time = date.toLocaleTimeString();
   if (message !== null) {
-    mssg.innerHTML = `<p>${message} </p>`
+    mssg.textContent = `${message}`
     timestamp.innerHTML = `<span>${time}</span>`
   }
 
